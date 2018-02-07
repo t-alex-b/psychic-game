@@ -30,7 +30,7 @@ document.onkeyup = function(event) {
 
 	if (letterToBeGuessed == userGuess) {
 		wins++;
-		console.log("You won!");
+		alert("You won!");
 		guessesLeft = 9;
 		guessesSoFar = [];
 		letterToBeGuessed = alphabetLetters[Math.floor(Math.random() * alphabetLetters.length)];
@@ -40,7 +40,7 @@ document.onkeyup = function(event) {
 	
 	if (guessesLeft == 0) {
 		losses++;
-		console.log("You lost!");
+		alert("You lost!");
 		guessesLeft = 9;
 		guessesSoFar = [];
 		letterToBeGuessed = alphabetLetters[Math.floor(Math.random() * alphabetLetters.length)];
@@ -48,7 +48,7 @@ document.onkeyup = function(event) {
 	}
 
 
-	var html = "<p><h1>The Psychic Game</h1></p>" + "<p><h4>Guess what letter I\'m thinking of</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesLeft + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesSoFar + "</h4></p>";
+	var html = "<p><h1>The Psychic Game</h1></p>" + "<p><h4>Press a key to try and guess which letter I/'m thinking of</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesLeft + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesSoFar + "</h4></p>";
 	document.querySelector("#game").innerHTML = html;
 
 }
